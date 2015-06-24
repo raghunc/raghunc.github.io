@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<h2 class="content">{{post.title}}</h2>
+
+{{content}}
