@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title></title>
+  <title>{%if page.title %}{{page.title }} | {% endif %}</title>
   <script type="text/javascript"
 	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
@@ -36,26 +36,7 @@
 
     
     <div class="main-content">
-      <section class="content">
-
-  <h3>Interests</h3>
-  <p> My interests fall broadly in Condensed Matter Physics and (scientific) computing.</p>
-  
-  <ul>
-    <h4><li>Physics</li></h4>
-    <ul>
-      <li>New states of matter, such as Topological Insulators</li>
-      <li>Quantum Computing</li>
-    </ul>   
-    <h4><li>Programming</li></h4>
-    I am interested in scientific computation, and I plan to contribute someday to a few open source projects.
-  </ul>
- 
-
-
-
-</section>
-
+      {{content}}
     </div>
     
 

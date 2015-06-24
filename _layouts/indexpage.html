@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title>Second post | </title>
+  <title>{%if page.title %}{{page.title }} | {% endif %}</title>
   <script type="text/javascript"
 	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
@@ -12,24 +12,22 @@
 <body>
   <div id="wrapper">
 
-    <!--div class="page-header">
+    <div class="page-header">
       <header>
-	<h4>Raghu Nandan Chilukuri</h4>
+	<h2>Raghu Nandan Chilukuri</h2>
       </header>    
-    </div-->
+    </div>
 
     <div class="nav-top"> 
       <ul>
-	<span style="color:#159557;font-weight:bold">Raghu Nandan Chilukuri</span>
 	<a href="/">Home</a>
 	<a href="/aboutme.html">About</a>
-	<a href="/posts.html">Blog posts</a>
+	<!--a href="/posts.html">Blog posts</a-->
       </ul>
     </div>
     
     <div class="main-content">
-      <p>Test—  this is a test</p>
-
+      {{content}}
     </div>
     
     <footer class="site-footer">

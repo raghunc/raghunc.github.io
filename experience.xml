@@ -1,3 +1,7 @@
+---
+layout: bio_default
+---
+
 <?xml version="1.0" encoding="UTF-8"?>
 <?latexml searchpaths=".,/usr/share/texmf/tex/latex/,//home/raghunc/Downloads/"?>
 <?latexml options="10pt" class="article"?>

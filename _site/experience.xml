@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title></title>
+  <script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div class="bio-page-header">
+      <header>
+	<h2>Raghu Nandan Chilukuri</h2>
+      </header>    
+    </div>
+
+    <div class="nav-bio">  
+      <!--nav role="navigation"-->
+      <details>
+	<ul>
+	  <a href="/">Home</a><br>
+	  <a href="/aboutme.html">About</a><br>
+	  <a href="/researchinterest.html">Interests</a><br>
+	  <a href="/experience.html">Experience</a><br>
+	  <a href="/cv">CV</a><br>
+	  <a href="contact">Contact me</a><br>
+	</ul>
+      </details>
+      <!--/nav-->
+    </div>
+
+    
+    <div class="main-content">
+      <?xml version="1.0" encoding="UTF-8"?>
 <?latexml searchpaths=".,/usr/share/texmf/tex/latex/,//home/raghunc/Downloads/"?>
 <?latexml options="10pt" class="article"?>
 <!-- %\usepackage[margin=0.8in]{geometry} -->
@@ -234,3 +272,16 @@ Advanced Solid State Physics(Many body theory)</p>
      %\end{itemize}-->
   </subsection>
 </document>
+
+    </div>
+    
+
+
+    <footer class="site-footer">
+      Maintained by Raghu Nandan Chilukuri
+    </footer>
+
+
+  </div>
+</body>
+</html>

@@ -13,21 +13,21 @@
 <body>
   <div id="wrapper">
 
-    <div class="page-header">
+    <div class="bio-page-header">
       <header>
 	<h1>Raghu Nandan Chilukuri</h1>
       </header>    
     </div>
 
-    <div class="nav">  
+    <div class="nav-bio">  
       <!--nav role="navigation"-->
       <details>
 	<ul>
 	  <a href="/">Home</a><br>
-	  <a href="/researchinterest.html">Research Interests</a><br>
+	  <a href="/aboutme.html">About</a><br>
+	  <a href="/researchinterest.html">Interests</a><br>
 	  <a href="/experience.html">Experience</a><br>
 	  <a href="/cv">CV</a><br>
-	  <a href="/posts.html">Blog posts</a></br>
 	  <a href="contact">Contact me</a><br>
 	</ul>
       </details>
