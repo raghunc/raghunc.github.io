@@ -1,0 +1,71 @@
+<p><strong><span style="font-variant: small-caps;">Raghu Nandan Chilukuri</span></strong></p>
+<p>raghu.rnc@gmail.com<br />
+<a href="http://homepages.uc.edu/~{}chilukrn/">http://homepages.uc.edu/ chilukrn/</a></p>
+<h2 id="education" class="unnumbered"><span style="font-variant: small-caps;">Education</span></h2>
+<p><strong>University of Cincinnati</strong> <strong>Cincinnati,OH,USA</strong> M.S.(Electrical Engineering) 2011 - 2014 GPA: 3.34/4 <strong>Birla Institute of Technology and Science(BITS)-Pilani</strong> (Goa campus) <strong>Goa,India</strong> B.Eng.(Hons) (Electrical &amp; Electronics Engineering) 2006 - 2010 GPA: 8.06/10</p>
+<h2 id="research" class="unnumbered"><span style="font-variant: small-caps;">Research</span></h2>
+<p><strong>Spintronics and Vacuum Nanoelectronics Laboratory</strong> <strong>Summer 2012 -</strong></p>
+<ul>
+<li><p>Numerical simulation of quantum random walks and modelling noisy quantum walks. (Spintronics laboratory, University of Cincinnati).</p></li>
+</ul>
+<h2 id="teaching-experience" class="unnumbered"><span style="font-variant: small-caps;">Teaching Experience</span></h2>
+<p><strong>Athletic Tutoring</strong> <strong>Fall 2012</strong></p>
+<ul>
+<li><p>Tutored introductory physics for student athletes at the University of Cincinnati.</p></li>
+</ul>
+<h2 id="work-experience" class="unnumbered"><span style="font-variant: small-caps;">Work Experience</span></h2>
+<p><strong>Intel Corporation</strong> <strong>Bangalore, India</strong> <em>Component Design Engineer</em> March 2016 - present</p>
+<ul>
+<li><p>Worked in Front-End (FE) verification team, and the support and methodology owner for VCS, Certitude (both Synopsys), and internal linting tools.</p></li>
+<li><p>Scripting support for internal EDA tools of Intel.</p></li>
+</ul>
+<p><strong>JustDial India Private Ltd.</strong> <strong>Bangalore, India</strong> <em>Data Scientist</em> September 2015 - February 2016</p>
+<ul>
+<li><p>Worked on implementing a recommender system for the e-commerce shopfront of JustDial</p></li>
+<li><p>Implemented features using custom versions of clustering algorithms</p></li>
+</ul>
+<p><strong>Cambridge Silicon Radio(CSR) India Private Ltd.</strong> <strong>Bangalore, India</strong> <em>Firmware test Intern</em> February 2011-August 2011</p>
+<ul>
+<li><p>Characterizing physical parameters such as power, gain and stress-test of bluetooth chips.</p></li>
+<li><p>Testing the Bluetooth lower stack firmware for these new chips.</p></li>
+<li><p>Designed and implemented an audio test system to test different profiles for audio streaming and BLE (Bluetooth low energy) file transfer between multiple devices.</p></li>
+</ul>
+<p><strong>Dept. of Electrical Engineering,IIT-Delhi</strong> <strong>Delhi, India</strong> <em>Change Detection Algorithms</em> October 2010-January 2011</p>
+<ul>
+<li><p>Change detection algorithms using segmentation and defocussing.</p></li>
+<li><p>Implemented using open-source computer vision libraries on a smart camera system.</p></li>
+</ul>
+<p><strong>Infinera India Private Ltd.</strong> <strong>Bangalore, India</strong> <em>System Verification</em> January 2010-June 2010</p>
+<ul>
+<li><p>Board simulation and system level testing of a system of line cards.</p></li>
+<li><p>Implemented a basic Verilog parser for netlist parsing and verification.</p></li>
+</ul>
+<h2 id="summer-intern" class="unnumbered"><span style="font-variant: small-caps;">Summer Intern</span></h2>
+<p><strong>Vikram Sarabhai Space Center (VSSC)</strong> <strong>Thiruvananthapuram, India</strong> <em>Testing of control module electronics</em> May 2008-July 2008</p>
+<ul>
+<li><p>Interfaced and programmed a PIC microcontroller to generate waveforms for testing control electronics module and mechanical characteristics of an electro-mechanical system.</p></li>
+</ul>
+<h2 id="academic-projects" class="unnumbered"><span style="font-variant: small-caps;">Academic Projects</span></h2>
+<ul>
+<li><p>Developed a routing tool (in C++) based on Channel Routing. The tool also produces a layout file for viewing with Magic layout editor.</p></li>
+<li><p>Implemented a variant of Kerninghan-Lin graph partition algorithm in C.</p></li>
+<li><p>Quantum Error Correction: Quantum error correction methods and a comparison of classical error correction techniques with their quantum counterparts. This project discusses few quantum error correction techniques as an extension of their classical counterparts.</p></li>
+<li><p>Selected Topics in Quantum Optics-Generation of Coherent States and Squeezed States : A study of semi-classical and non-classical optical states and their generation.</p></li>
+</ul>
+<h2 id="paperstechnical-reports" class="unnumbered"><span style="font-variant: small-caps;">Papers/Technical Reports</span></h2>
+<ul>
+<li><p>Dr.A.K.Biswas, Ch.Raghu Nandan, V.Jayanth,“A sphere moving down the surface of a static sphere and a simple phase diagram”. (arXiv classical physics: <a href="http://arxiv.org/abs/0808.3531v2" class="uri">http://arxiv.org/abs/0808.3531v2</a>)</p></li>
+<li><p>“Design of a virtual Hawk-Eye system using LabVIEW” : A project to simulate the 3 dimensional motion of a projectile (a tennis ball in this case). This was submitted to ’VI Mantra 2009’ contest by National Instruments, India, as a paper with the same name.</p></li>
+</ul>
+<h2 id="graduate-courses" class="unnumbered"><span style="font-variant: small-caps;">Graduate Courses</span></h2>
+<p>Semiconductor microfabricationFundamentals of MEMS Electromagnetic Theory Characterization of materials by optical methods Quantum Mechanics Quantum Computation Semiconductor Physics Advanced Solid State Physics(Many body theory-Green’s function formalism)</p>
+<h2 id="technical-skills" class="unnumbered"><span style="font-variant: small-caps;">Technical Skills</span></h2>
+<p><strong>Languages:</strong> C,</p>
+<p>C</p>
+<p>, Julia, Fortran, Verilog HDL, Perl, Python, Assembly, LaTeX. <strong>Software Packages:</strong> Matlab/Octave, Pspice, Xilinx ISE, Altera Quartus, Magic, LabVIEW <strong>Operating systems:</strong> GNU/Linux, Windows</p>
+<h2 id="academic-achievements" class="unnumbered"><span style="font-variant: small-caps;">Academic Achievements</span></h2>
+<ul>
+<li><p>Recipient of University Graduate Scholarship(UGS) at University of Cincinnati.</p></li>
+<li><p>Selected for Indian National Chemistry Olympiad (INChO), 2006 (top 1% among an estimated 20,000 aspirants who appeared for National Standard Exam in Chemistry- NSEC).</p></li>
+<li><p>Recipient of Merit cum Need scholarship of Bits-Pilani, Goa campus for six semesters.</p></li>
+</ul>
