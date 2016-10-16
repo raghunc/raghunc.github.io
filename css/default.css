@@ -52,6 +52,7 @@ div#header #navigation-box a {
     #margin-left: 15px;
 }
 
+/*
 @media (min-width: 900px) {
     div#nav {
         display: block;
@@ -64,7 +65,7 @@ div#header #navigation-box a {
 	margin-top: 1ex;
 	margin-bottom: 1ex;
     }
-}
+} */
 
 .content {
     color: black;
@@ -141,6 +142,7 @@ div.info {
     font-style: italic;
 }
 
+/*
 @media (min-width: 400px) {
 	img.logo {
 	    display: inline;
@@ -158,7 +160,7 @@ div.info {
 	    margin-bottom: 1ex;
 	}
 }
-
+*/
 
 
 /* Font-Zeug */

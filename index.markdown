@@ -7,7 +7,7 @@ Welcome to my homepage!
 
 Welcome to my (digital) home. I am Raghu Nandan Chilukuri, and this is my corner in the interwebz where I occasionally plan to write about my work and interesting things I come across: spanning Quantum computing, Condensed matter physics and (scientific) computing.
 
-You find more about me in the [About](about.html) section or find my contact in the [Contact](contact.html) section. Also, my CV can be accessed [here](files/RaghuChilukuri_C.pdf) (in pdf format).
+You find more about me in the [About](about.html) section or find my contact in the [Contact](contact.html) section. Also, my CV can be accessed [here](files/RaghuChilukuri_CV.pdf) (in pdf format).
 
 About this site
 --------
