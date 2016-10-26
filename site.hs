@@ -29,7 +29,7 @@ main = hakyll $ do
         route $setExtension "pdf"
         compile pandocCompiler
 
-    match "index.markdown" $do
+    match "index.rst" $do
         route $ setExtension "html"
         compile $ do
             let indexCtx = mconcat
