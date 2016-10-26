@@ -54,11 +54,23 @@ main = hakyll $ do
 
                     
 
-    match (fromList ["about.rst", "contact.markdown", "*.markdown"]) $ do
+    match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
+	    
+    match "experience.markdown" $ do
+        route $setExtension "html"
+	compile $pandocCompiler
+	    >>= loadAndApplyTemplate "templates/experience.html" defaultContext
+	    >>= relativizeUrls
+    
+    match "*.markdown" $ do
+        route $setExtension "html"
+	compile $pandocCompiler
+	    >>= loadAndApplyTemplate "templates/default.html" defaultContext
+	    >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension "html"
