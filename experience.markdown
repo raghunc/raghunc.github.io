@@ -10,7 +10,7 @@ I have worked in different positions in industry. I have mentioned some highligh
 Worked with Prof. Marc Cahay (Spintronics lab, University of Cincinnati) on numerical simulation of quantum random walks and modelling noisy quantum walks.
 
 **Independent work**
-Working on generalizing the noisy quantum walk and provide an alternative approach using the quantum-operations approach. Further details are [here](quantumwalk.html)
+Working on generalizing the noisy quantum walk and provide an alternative approach using the quantum-operations approach. Further details are [here](work.html)
 
 ## Work Experience
 

@@ -53,7 +53,7 @@ main = hakyll $ do
                                            , writerStandalone = True
                                          }
 
-    match (fromList ["about.rst", "contact.markdown"]) $ do
+    match (fromList ["about.rst", "contact.markdown", "work.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
