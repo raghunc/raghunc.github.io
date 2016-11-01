@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:svg="http://www.w3.org/2000/svg">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>My Home - Quantum operator representation of the noisy quantum walk</title>
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      <!-- tex2jax: { inlineMath: [[","], ["\\(","\\)"]] }  -->
+      TeX: {equationNumbers: {autoNumber: "AMS"}}
+      });
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+    <!--script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script-->
+  </head>
+  
+  <body>  
+    <div id="header">
+      <div id="logo">
+	<a href="../index.html">Raghu Nandan Chilukuri</a>
+      </div>
+      <div id="navigation-box">
+	<ul>
+	  <li><a href="../index.html">Home</a></li>
+	  <li><a href="../about.html">About</a></li>
+	  <li><a = href="../experience.html">Experience</li>
+	  <li><a href="../work.html">Work</a></li>
+	  <li><a href="../files/RaghuChilukuri_CV.pdf">CV</a></li>
+	  </ul>
+	</div>
+      </div>
+
+      <div class="bodywrap">
+	<div id="main-content" class="content">
+	  <!--
+               
+              -->
+	  <p><strong>P.S.:</strong> This is a work in progress, and this post is incomplete. I will update this page soon, when I make some progress on this topic.</p>
+<p>This is a continuation of the <a href="../work/quantumwalk_noisy.html">page</a> which described noisy quantum walk. Here we try to recast the Schrodinger picture of the noisy quantum walk in Kraus operator (quantum operator) representation.</p>
+<h3 id="kraus-representation-of-the-quantum-walk">Kraus representation of the quantum walk</h3>
+<p>Now we try the Kraus operator representation of noisy quantum walk. Here, the coin operator is the source of the noise. Assume the initial coin state (or spin state) is:</p>
+<p><span class="math display">\[ \mid\!s\!\rangle = a_{\uparrow} \mid\!\uparrow\!\rangle + a_{\downarrow} \mid\!\downarrow\!\rangle \]</span></p>
+<p>The corresponding density matrix would look: <span class="math display">\[
+\begin{eqnarray}
+  \rho_{0} = \mid\!s\!\rangle \langle\!s\!\mid = \left[\begin{array}{c} a_{\uparrow}\\ a_{\downarrow}\end{array}\right] \left[\begin{array}{c}a_{\uparrow}^{*}\quad a_{\downarrow}^{*}\end{array} \right]
+\rho_{0}  = \left[\begin{array}{cc}\mid\! a_{\uparrow}\!\mid^{2} &amp; a_{\uparrow}a_{\downarrow}^{*} \\
+               a_{\uparrow}^{*}a_{\downarrow} &amp; \mid a_{\downarrow}\mid^{2}
+    \end{array} \right]
+\end{eqnarray}
+\]</span></p>
+<p>The noisy quantum operator acts on the initial state to give the final state as: <span class="math display">\[
+\left[\begin{array}{cc} r &amp; \sqrt{1 - r^{2}} \\\sqrt{1 - r^{2}} &amp; -r \end{array}\right] \left[\begin{array}{c} a_{\uparrow} \\ a_{\downarrow} \end{array}\right] = \left[\begin{array}{c}ra_{\uparrow} + a_{\downarrow}\sqrt{1 - r^{2}} \\ a_{\uparrow}\sqrt{1 - r^{2}} - ra_{\downarrow} \end{array}\right]
+\]</span></p>
+<p>The density of the final state in the above equation can be written: <span class="math display">\[ \begin{equation}\label{eq:finalstate-densitymatrix}
+\begin{aligned}
+\rho^{\prime} &amp; = {} \left[\begin{array}{c}ra_{\uparrow} + a_{\downarrow}\sqrt{1 - r^{2}} \\ a_{\uparrow}\sqrt{1 - r^{2}} - ra_{\downarrow} \end{array}\right] \left[\begin{array}{cc}ra_{\uparrow}^{*} + a_{\downarrow}^{*}\sqrt{1 - r^{2}} &amp; a_{\uparrow}^{*}\sqrt{1 - r^{2}} - ra_{\downarrow}^{*} \end{array}\right] \\
+&amp; = \left[\begin{array}{cc} r^{2}\mid\! a_{\uparrow}\!\mid^2+(1-r^{2})\mid\! a_{\downarrow}\!\mid^{2}+(r\sqrt{1-r^{2}})(a_{\uparrow}a_{\downarrow}^{*}+a_{\uparrow}^{*}a_{\downarrow}) &amp; (r\sqrt{1-r^{2}})(\mid\! a_{\uparrow}\!\mid^{2} - \mid\! a_{\downarrow}\!\mid^{2})+(1-r^{2})a_{\downarrow}a_{\uparrow}^{*}-r^{2}a_{\uparrow}a_{\downarrow}^{*} \\
+(r\sqrt{1-r^{2}})(\mid\!a_{\uparrow}\!\mid^{2} - \mid\! a_{\downarrow}\!\mid^{2})+(1-r^{2})a_{\uparrow}a_{\downarrow}^{*}-r^{2}a_{\downarrow}a_{\uparrow}^{*} &amp; (1-r^{2})\mid\! a_{\uparrow}\!\mid+ r^{2}\mid\! a_{\uparrow}\!\mid^2-(r\sqrt{1-r^{2}})(a_{\uparrow}a_{\downarrow}^{*}+a_{\uparrow}^{*}a_{\downarrow})
+  \end{array}\right]
+\end{aligned}
+\end{equation}  \]</span></p>
+<p>We have tried to represent the density matrix <span class="math inline">\(\rho^{\prime}\)</span> given in  in Kraus representatiion. It can be separated into 3 matrices (2 of which are in Kraus form) as:</p>
+<p><span class="math display">\[ \begin{equation}
+  \begin{aligned}
+  \rho^{\prime} = {} &amp; r^{2} \left[\begin{array}{cc}\mid\! a_{\uparrow}\!\mid^{2} &amp; -a_{\uparrow}a_{\downarrow}^{*} \\
+               -a_{\uparrow}^{*}a_{\downarrow} &amp; \mid\! a_{\downarrow}\!\mid^{2} \end{array} \right] \\
+  &amp; + (1-r^{2})\left[\begin{array}{cc}\mid\! a_{\downarrow}\!\mid^{2} &amp; a_{\downarrow}a_{\uparrow}^{*} \\
+               a_{\uparrow}a_{\downarrow}^{*} &amp; \mid\! a_{\uparrow}\!\mid^{2} \end{array} \right] \\
+  &amp; + (r\sqrt{1-r^{2}})\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} &amp; (\mid\! a_{\uparrow}\!\mid^{2}-\mid\! a_{\downarrow}\!\mid^{2}) \\
+             (\mid\! a_{\uparrow}\!\mid^{2}-\mid\! a_{\downarrow}\!\mid^{2}) &amp; -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*})\end{array} \right]
+  \end{aligned}
+\end{equation}  \]</span> which can be written in Kraus form as:</p>
+<p><span class="math display">\[ \begin{equation}
+  \begin{aligned}
+    \rho^{\prime} = {} &amp; r^{2}Z\rho_{0}\!Z^{\dagger} + (1-r^{2})X\rho_{0}\!X^{\dagger}
+                  &amp; + (r\sqrt{1-r^{2}})\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} &amp; (\mid\! a_{\uparrow}\!\mid^{2}-\mid\! a_{\downarrow}\!\mid^{2}) \\
+             (\mid\! a_{\uparrow}\!\mid^{2}-\mid\! a_{\downarrow}\!mid^{2}) &amp; -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} \end{array}\right]
+  \end{aligned}
+\end{equation}  \]</span></p>
+<p>The problem boils down to casting all the terms of the above equation in the Kraus operator representation. The first two terms here are in the Kraus form, whereas the last one couldn’t be cast in that form. (work in progress…)</p>
+<p><sub><sup><br /><br />Note: If you can’t see the equations, please wait for a few seconds and check your internet connection. This site uses the cloud version of MathJax, and it may take time to render on slow connetions. If you still see errors in rendering, please let me know.</sup></sub></p>
+	</div>
+      </div>
+      
+      <div id="footer">
+	<div id="footer-text">
+	  Site proudly generated by
+	  <a href="http://jaspervdj.be/hakyll">Hakyll</a> </div>
+      </div>
+      
+    </body>
+  </html>

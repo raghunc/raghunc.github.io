@@ -10,7 +10,7 @@ I have worked in the industry in various positions in firmware/software, hardwar
 
 .. _here: ./experience.html
 
-.. _quantum walk:: https://en.wikipedia.org/wiki/Quantum_walk
+.. _quantum walk: https://en.wikipedia.org/wiki/Quantum_walk
 
 .. rubric:: Contact
 	    
