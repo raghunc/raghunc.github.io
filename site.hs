@@ -3,6 +3,7 @@
 import           Data.Monoid (mappend)
 import           Hakyll
 import Text.Pandoc.Options
+import qualified Data.Set as S
 
 --------------------------------------------------------------------------------
 siteTitle = "Raghu's Home"
@@ -52,8 +53,6 @@ main = hakyll $ do
                                            , writerStandalone = True
                                          }
 
-                    
-
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
@@ -69,6 +68,13 @@ main = hakyll $ do
     match "*.markdown" $ do
         route $setExtension "html"
 	compile $pandocCompiler
+	    >>= loadAndApplyTemplate "templates/default.html" defaultContext
+	    >>= relativizeUrls
+
+    match "work/*.markdown" $ do
+        route $setExtension "html"
+	-- compile $pandocCompilerWith defaultHakyllReaderOptions writerOptions
+	compile $pandocMathCompiler
 	    >>= loadAndApplyTemplate "templates/default.html" defaultContext
 	    >>= relativizeUrls
 
@@ -117,3 +123,13 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+pandocMathCompiler =
+    let mathExtensions = [Ext_tex_math_dollars, Ext_tex_math_double_backslash, Ext_latex_macros]
+        defaultExtensions = writerExtensions defaultHakyllWriterOptions
+        newExtensions = foldr S.insert defaultExtensions mathExtensions
+        writerOptions = defaultHakyllWriterOptions {
+                            writerExtensions = newExtensions,
+                            writerHTMLMathMethod = MathJax ""
+                        }
+    in pandocCompilerWith defaultHakyllReaderOptions writerOptions

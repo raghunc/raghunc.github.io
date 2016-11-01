@@ -1,0 +1,273 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+%\DeclarePairedDelimiter\abs*{\lvert*}{\rvert*}
+%\DeclarePairedDelimiter\norm*{\lVert*}{\rVert*}
+
+\usepackage[T1]{fontenc}
+
+
+
+
+
+\begin{document}
+\title{Kraus operator representation of the noisy quantum walk}
+\maketitle
+
+\section{Quantum walk in Schrodinger representation}
+\subsection{Time evolution}
+\subsubsection{Ideal Hadamard Walk} \label{sec:qrw-evolution}
+
+To describe time evolution, consider a walker/particle performing a discrete-time quantum random walk on a one-dimensional lattice (line). To see the time evolution of the walker, let the state of the walker at time $t$ be:
+\begin{equation} \label{eq:initial-state}
+\mid\! \psi(t)\rangle = \displaystyle \sum\limits_{n = -\infty}^{\infty}\sum\limits_{s=\downarrow}^{\uparrow} a_{n,s}(t)\mid\! n\rangle\mid\! s\rangle
+\end{equation}
+
+The state vector $\mid\! n\rangle$ ($n = 0, \pm1, \pm2, \ldots$) represents the spatial part of wavefunction at site $n$, and $\mid\! s\rangle$ ($s$ can be $L (\downarrow)$ or $R (\uparrow)$) is the spin (coin) part. The complex coefficients $a_{n,s}$ are probability amplitudes of the basis states $\mid\! n\rangle \mid\! s\rangle$. The complex numbers $a_{n,s}(t)$ are probability amplitudes, and hence obey: $\sum\limits_{n = -\infty}^{\infty} \mid\! a_{n,s}(t)\!\mid^{2} = 1$.  The coefficients $a_{n,s}(t+1)$ at the next time step depends on the spin/chirality state at time $t$. The time evolution of the quantum random walk is given by:
+
+\begin{equation} \label{eq:time-evolution}
+\mid\! \psi(t+1)\rangle = \hat{Q}\mid\! \psi(t)\rangle
+\end{equation} 
+
+The time evolution operator $\hat{Q}$ is a product of two components $\hat{Q} = \hat{T}\hat{U_{0}}$. The order of operation is from right to left, so the operator $\hat{U_{0}}$ acts first, followed by $\hat{T}$. Now, $\hat{U_{0}} = \hat{I} \otimes \hat{w_{0}}$ is an operator which acts only on the chiral(spin) state space(by $\hat{w_{0}}$) and leaves the position state unchanged (by acting with $\hat{I}$, the identity operator). In the next step, the $\hat{T}$ operator acts on the position space (moving the particle one step), leaving the coin state unchanged. \newline
+
+The requirement on $\hat{w_{0}}$ is that it should be a unitary operator, to conserve probability. So out of several possible choices, consider the standard ``\textit{Hadamard}'' walk, in which a `Hadamard operator' acts on the chiral (coin) state.
+
+%The choice of the Hadamard matrix as the coin operator is not unique. There are other possible coin operators, such as the Grover coin opeator. Several other possible approaches to control the quantum random walks by choices of initial states and different coin operators are described the works of Tregenna~\citep{1367-2630-5-1-383}, Brun~\citep{PhysRevA.67.032304}~\citep{PhysRevLett.91.130602} etc. \newline
+
+The action of the Hadamard operator can be represented as:
+
+\begin{equation} \label{eq:hadamard-op}
+\begin{aligned}
+\hat{w_{0}}\mid\! \uparrow\rangle = \dfrac{\mid\! \uparrow\rangle + \mid\! \downarrow\rangle}{\sqrt{2}} \\
+ \hat{w_{0}}\mid\! \downarrow\rangle = \dfrac{\mid\! \uparrow\rangle - \mid\! \downarrow\rangle}{\sqrt{2}}
+\end{aligned}
+\end{equation}
+
+%\textit{i.e.}, the Hadamard operator (matrix) acting on a pure spin state sends them into one of two mutually orthogonal states (new-basis) in which the probabilities of $\mid\! \uparrow\rangle$ and $\mid\! \downarrow\rangle$ are equal. \newline
+
+%For the quantum walk on the line, the coin state can take one of two possible values, physically implemented by two level systems like a spin-$\frac{1}{2}$ system or plane-polarized photons.
+The basis states of the 2-level coin state can be represented as a 2-level spin system in which 
+
+\begin{equation}\label{eq:spin-basis}
+\mid\! R\rangle = \mid\! \uparrow\rangle \equiv \left[ \! \begin{array}{c}
+1 \\
+0\\
+\end{array} \!\right] \mbox{               and               } 
+\mid\! L\rangle = \mid\! \downarrow\rangle \equiv \left[ \! \begin{array}{c}
+0 \\
+1\\
+\end{array} \!\right]
+\end{equation}
+
+The Hadamard operator which converts these basis states into two (orthogonal) equal-superposition new basis states, in the above representation, is given by:
+\begin{equation}
+\hat{w_{0}} = \dfrac{1}{\sqrt{2}} \left[ \!\begin{array}{cc}
+                       1 &  1 \\
+                       1 & -1 \\
+         \end{array} \!\right]
+\end{equation} 
+
+After acting with $U_{0}$, the position shift operator on the left \textit{i.e.} $\hat{T}$ acts on the position part of the state. The $\hat{T}$ operator is a translation operator which shifts the position of the particle one step to the left or right depending on whether the chirality is $\downarrow$ or $\uparrow$ respectively. 
+\begin{equation}\label{eq:translation-op}
+\begin{aligned}
+\hat{T}\mid\! n\rangle \mid\! \uparrow\rangle = \mid\! n+1\rangle \mid\! \uparrow\rangle \\
+\hat{T}\mid\! n\rangle \mid\! \downarrow\rangle = \mid\! n-1\rangle \mid\! \downarrow\rangle 
+\end{aligned}
+\end{equation}  
+
+To see the time-evolution operator in action, start with the initial state specified in equation ~\eqref{eq:initial-state} and the time evolution as considered in equation ~\eqref{eq:time-evolution}.
+\[ \mid\!\Psi(t+1)\rangle = \hat{T}\hat{U_{0}} \mid\! \Psi(t)\rangle =  \displaystyle \sum\limits_{n = -\infty}^{\infty} \hat{T}\hat{U_{0}} a_{n,\uparrow}(t) \mid\! n\rangle \mid\!\uparrow\rangle +  \displaystyle \sum\limits_{n = -\infty}^{\infty} \hat{T}\hat{U_{0}} a_{n,\downarrow}(t) \mid\! n\rangle \mid\!\downarrow\rangle \]
+
+which, according to the action of Hadamard and time evolutions operators described in equations ~\eqref{eq:hadamard-op} and ~\eqref{eq:translation-op} respectively becomes:
+\[ \hat{Q}\mid\! \Psi(t)\rangle =  \displaystyle \sum\limits_{n = -\infty}^{\infty}  \dfrac{a_{n,\uparrow}(t)}{\sqrt{2}} \left( \mid\! n+1\rangle \mid\!\uparrow\rangle + \mid\! n-1\rangle \mid\!\downarrow\rangle  \right) \\
+   +  \displaystyle \sum\limits_{n = -\infty}^{\infty} \dfrac{a_{n,\downarrow}(t)}{\sqrt{2}} \left(  \mid\! n+1\rangle \mid\!\uparrow\rangle - \mid\! n-1\rangle \mid\!\downarrow\rangle   \right)    \]
+
+Collect the terms with identical kets:
+\begin{equation}
+\mid\!\Psi(t+1)\rangle =  \displaystyle \sum\limits_{n = -\infty}^{\infty} \left\lbrace \left( \dfrac{ a_{n,\uparrow}(t) + a_{n,\downarrow}(t)  }{\sqrt{2}} \right) \mid\! n+1\rangle \mid\!\uparrow\rangle + \left( \dfrac{ a_{n,\uparrow}(t) - a_{n,\downarrow}(t) }{\sqrt{2}} \right) \mid\! n-1\rangle \mid\!\uparrow\rangle   \right\rbrace
+\end{equation} 
+
+Comparing it to the standard form the state vector at time $t+1$ as described in equation~\eqref{eq:initial-state}, the relation between the coefficients $a_{n,s}$ at different time instants can be summarized as:
+\begin{subequations} \label{eq:ideal-coeff}
+\begin{align}
+a_{n,\uparrow}(t+1) = \dfrac{1}{\sqrt{2}}[a_{n-1,\uparrow}(t) + a_{n-1,\downarrow}(t)] \\
+a_{n,\downarrow}(t+1) = \dfrac{1}{\sqrt{2}}[a_{n+1,\uparrow}(t) - a_{n+1,\downarrow}(t)]
+\end{align}
+\end{subequations}
+
+%To solve these recursive relations, assume the walker starts at the origin ($n = 0$), and fix the chirality of the walker in a known state, say, $\mid\uparrow\rangle$ or $\mid\downarrow\rangle$ or any known superposition of  $\mid\uparrow\rangle$ and $\mid\downarrow\rangle$. This way, once the initial state is known, the coefficients $a_{n,s}(t)$ at any finite time $t$ can be calculated and the state of the walker at any time is known. \newline
+
+The probability of finding the walker at position $n$ at time $t$ is $P_{t}(n)$. The quantity of interest is the standard deviation $\sigma(t)$ of the position of the walker performing the Hadamard walk, given by:
+
+$$\sigma^{2}(t) \equiv \overline{\langle n^{2}(t) \rangle} - \overline{\langle n(t) \rangle}^{2} $$ 
+
+where $\langle n \rangle$ and $\langle n^{2} \rangle$ are defined by: 
+
+\begin{eqnarray}
+\overline{\langle n^{2}(t) \rangle} = \displaystyle \sum\limits_{n = -t}^{t} n^{2} \langle P_{t}(n)\rangle \\
+\overline{\langle n(t) \rangle} = \displaystyle \sum\limits_{n = -t}^{t} n \langle P_{t}(n)\rangle
+\end{eqnarray}
+
+\subsubsection{Noisy Hadamard Walk} \label{sec: noisy hadamard walk}
+
+One way to introduce noise in the quantum walk is to `bias' the ideal coin, that is, change the coin operator. For this, a random variable `$r$' is introduced, and can take any values in the range $[0,1]$ (both inclusive). The new, more general ``\textit{coin}'' operator is defined to be:
+\begin{equation}
+\hat{w} = \left[ \begin{array}{cc}
+r                 &  \sqrt{1 - r^{2}} \\
+\sqrt{1 - r^{2}}  &   -r \\
+\end{array} \right]
+\end{equation}
+
+
+It can be seen that the Hadamard matrix $\hat{w_{0}}$ is special case of $\hat{w}$ shown above, when $r = \frac{1}{\sqrt{2}}$. \newline
+
+%Also, the matrix $\hat{w}$ can give rise to other important matrices for various values of $r$:
+
+%\begin{equation}
+%\hat{w}(r=0) = \left[ \begin{array}{cc}
+% 0     &     1  \\
+% 1     &     0  \\
+%\end{array}  \right] \equiv \sigma_{x} \mbox{ , and  }
+%\hat{w}(r=1) = \left[ \begin{array}{cc}
+%1     &    0  \\
+%0     &   -1  \\
+%\end{array} \right] \equiv \sigma_{z}
+%\end{equation} 
+
+
+The action of the noisy Hadamard operator on the basis states in ~\eqref{eq:spin-basis} is given by:
+\begin{subequations} \label{eq:noisy-H-action}
+\begin{align}
+\hat{w} \mid\! \uparrow\rangle =  r\mid\!\uparrow\rangle + \sqrt{1 - r^{2}} \mid\!\downarrow\rangle   \equiv \left[ \begin{array}{c}
+                                            r  \\
+                                         \sqrt{1 - r^{2}}
+                                        \end{array} \right]        \\                                                                  
+\hat{w} \mid\! \downarrow\rangle =  \sqrt{1 - r^{2}} \mid\!\uparrow\rangle - r \mid\!\downarrow\rangle  \equiv   \left[ \begin{array}{c}
+                                         \sqrt{1 - r^{2}}  \\
+                                               -r
+                                        \end{array} \right] 
+\end{align}                                                                               
+\end{subequations}
+
+Substitute these relations in the time evolution equation~\eqref{eq:time-evolution}, where $Q = \hat{T}\hat{U_{0}}$. The operator $\hat{U_{0}}$ acts first, and its action is given by:
+\begin{eqnarray}
+\begin{aligned}
+\hat{U_{0}}\mid\! n\rangle \mid\!\uparrow\rangle = (\hat{I}\otimes \hat{w}(r)) \mid\! n\rangle \otimes \mid\!\uparrow\rangle \\
+\hat{U_{0}}\mid\! n\rangle \mid\!\uparrow\rangle = [\hat{I}\mid\! n\rangle] \otimes [\hat{w}(r)\mid\!\uparrow\rangle]
+\end{aligned}
+\end{eqnarray} 
+
+The action of the Hadamard operator $\hat{w}(r)$ is given by equation~\eqref{eq:noisy-H-action}, so that the above equation becomes
+\begin{equation}
+\hat{U_{0}}\mid\! n\rangle \mid\!\uparrow\rangle = \mid\! n\rangle \otimes \{r\mid\!\uparrow\rangle + \sqrt{1 - r^{2}} \mid\! \downarrow\rangle\}
+\end{equation}
+
+Instead, if the initial state of the walker is $\mid\! n\rangle \mid\!\downarrow\rangle$,  the resulting state after the operator $U_{0}$ acts becomes:
+\begin{equation}
+\hat{U_{0}}\mid\! n\rangle \mid\!\downarrow\rangle = \mid\! n\rangle \otimes \{\sqrt{1 - r^{2}}\mid\!\uparrow\rangle - r\mid\!\downarrow\rangle \}
+\end{equation} 
+
+Now the translation operator $\hat{T}$ acts on the resulting state $\hat{U_{0}}\mid\!n\rangle\mid\!s\rangle$ (where $s = \uparrow$ or $\downarrow$) to complete the time evolution described in equation~\eqref{eq:time-evolution}. The state of the walker at the next time step would be:
+\begin{equation}
+ \begin{split}
+\mid\! \psi(t+1)\rangle = \hat{T} \left[ \displaystyle \sum\limits_{n = -\infty}^{\infty} a_{n,\uparrow}(t)\mid\! n\rangle \left( r \mid\!\uparrow\rangle + \sqrt{1 - r^{2}} \mid\!\downarrow\rangle \right) \right.\\
+  &\quad  \left. +  \displaystyle \sum\limits_{n = -\infty}^{\infty} a_{n,\downarrow}(t)\mid\! n\rangle \left(\sqrt{1 - r^{2}} \mid\!\uparrow\rangle - r \mid\!\downarrow\rangle \right)   \right]
+\end{split}
+\end{equation}
+
+Now using the properties of time-evolution operator $\hat{T}$ described in~\eqref{eq:translation-op}, the above equation becomes:
+\begin{equation}
+  \begin{split}
+\mid\! \psi(t+1)\rangle = \displaystyle \sum\limits_{n = -\infty}^{\infty} a_{n,\uparrow}(t) \left( r\mid\! n+1\rangle \mid\!\uparrow\rangle + \sqrt{1 - r^{2}} \mid\! n-1\rangle \mid\!\downarrow\rangle  \right) \\
+&\quad  + \displaystyle \sum\limits_{n = -\infty}^{\infty} a_{n,\downarrow}(t) \left( \sqrt{1 - r^{2}} \mid\! n+1\rangle \mid\!\uparrow\rangle - r \mid\! n-1\rangle \mid\!\downarrow\rangle \right)
+  \end{split}
+\end{equation}
+
+ and rearranging the terms in a summation of single infinite series in terms of the corresponding state vectors:
+\begin{equation}
+\begin{split}
+\mid\! \psi(t+1)\rangle = \displaystyle \sum\limits_{n = -\infty}^{\infty} \left[  \left( a_{n,\uparrow}(t) r + a_{n,\downarrow}(t) \sqrt{1 - r^{2}} \right) \mid\! n+1\rangle \mid\!\uparrow\rangle  \right. \\
+&\qquad \left. + \left( a_{n,\uparrow}(t) \sqrt{1 - r^{2}} - a_{n,\downarrow}(t) r \right) \mid\! n-1\rangle  \mid\!\downarrow\rangle  \right]
+\end{split}
+\end{equation} 
+
+To find out the relations between various coefficients $a_{n,\uparrow}$ and $a_{n,\downarrow}$, the above equation needs to be rewritten. Since the state vector is the sum of an infinite series, $\mid\! n+1\rangle$  can be rewplaced with $\mid\!n\rangle$ and replace $a_{x}$ with $a_{x-1}$ in the corresponding coefficient term. This amounts to 'adjusting the window' to look at the term one step to the left. Similarly, replace the coefficients $a_{n}$ with $a_{n+1}$ and $\mid\! n-1\rangle$ with $\mid\! n\rangle$ in the second set of brackets, looking at one term to the right in the infinite sum. The resulting equation can be rewritten as:
+\begin{equation}
+  \begin{split}
+\mid\! \psi(t+1)\rangle = \displaystyle \sum\limits_{n = -\infty}^{\infty} \left[ \left( a_{n-1,\uparrow}(t)r + a_{n-1,\downarrow}(t) \sqrt{1 - r^{2}} \right) \mid\! n\rangle \mid\!\uparrow\rangle \right.\\ 
+  &\quad \left. + \left( a_{n+1,\uparrow}(t) \sqrt{1 - r^{2}} - a_{n+1,\downarrow}(t)r \right) \mid\! n\rangle \mid\!\downarrow\rangle      \right] 
+\end{split}
+\end{equation}
+
+These terms in parentheses are the coefficients of state vectors at time $t+1$ \textit{i.e.} $a_{n,\uparrow}(t+1)$ and $a_{n,\downarrow}(t+1)$. Comparing the coefficients of basis vectors in the above equation to those in the time evolution equation ~\eqref{eq:time-evolution}, the following recursive relations are obtained:
+\begin{subequations}\label{eq:noisy-coeff}
+\begin{align}
+a_{n, \uparrow}(t + 1) = a_{n-1, \uparrow}(t).r + a_{n-1, \downarrow}(t).\sqrt{1 - r^{2}} \\
+a_{n, \downarrow}(t + 1) = a_{n+1, \uparrow}(t).\sqrt{1 - r^{2}} - a_{n+1, \downarrow}(t).r
+\end{align}
+\end{subequations}
+
+\subsection{Kraus representation}
+
+Now we try the Kraus operator representation of noisy quantum walk. Here, the ``coin'' operator is the source of the noise. Assume the initial coin state (or spin state) is:
+
+$$ \mid\!s\!\rangle = a_{\uparrow} \mid\!\uparrow\!\rangle + a_{\downarrow} \mid\!\downarrow\!\rangle $$
+
+The corresponding density matrix would look:
+
+\begin{eqnarray}
+  \rho_{0} = \mid\!s\!\rangle \langle\!s\!\mid = \left[\begin{array}{c} a_{\uparrow}\\ a_{\downarrow}\end{array}\right] \left[\begin{array}{c}a_{\uparrow}^{*}\quad a_{\downarrow}^{*}\end{array} \right]
+\rho_{0}  = \left[\begin{array}{cc}\abs{a_{\uparrow}}^{2} & a_{\uparrow}a_{\downarrow}^{*} \\
+               a_{\uparrow}^{*}a_{\downarrow} & \abs{a_{\downarrow}}^{2}
+    \end{array} \right]
+\end{eqnarray}
+
+
+The noisy quantum operator acts on the initial state to give the final state as:
+$$
+\left[\begin{array}{cc} r & \sqrt{1 - r^{2}} \\\sqrt{1 - r^{2}} & -r \end{array}\right] \left[\begin{array}{c} a_{\uparrow} \\ a_{\downarrow} \end{array}\right] = \left[\begin{array}{c}ra_{\uparrow} + a_{\downarrow}\sqrt{1 - r^{2}} \\ a_{\uparrow}\sqrt{1 - r^{2}} - ra_{\downarrow} \end{array}\right]
+$$
+
+The density of the final state in the above equation can be written:
+\begin{equation}\label{eq:finalstate-densitymatrix}
+\begin{aligned}
+\rho^{\prime} & = {} \left[\begin{array}{c}ra_{\uparrow} + a_{\downarrow}\sqrt{1 - r^{2}} \\ a_{\uparrow}\sqrt{1 - r^{2}} - ra_{\downarrow} \end{array}\right] \left[\begin{array}{cc}ra_{\uparrow}^{*} + a_{\downarrow}^{*}\sqrt{1 - r^{2}} & a_{\uparrow}^{*}\sqrt{1 - r^{2}} - ra_{\downarrow}^{*} \end{array}\right] \\
+& = \left[\begin{array}{cc} r^{2}\abs{a_{\uparrow}}^2+(1-r^{2})\abs{a_{\downarrow}}^{2}+(r\sqrt{1-r^{2}})(a_{\uparrow}a_{\downarrow}^{*}+a_{\uparrow}^{*}a_{\downarrow}) & (r\sqrt{1-r^{2}})(\abs{a_{\uparrow}}^{2} - \abs{a_{\downarrow}}^{2})+(1-r^{2})a_{\downarrow}a_{\uparrow}^{*}-r^{2}a_{\uparrow}a_{\downarrow}^{*} \\
+(r\sqrt{1-r^{2}})(\abs{a_{\uparrow}}^{2} - \abs{a_{\downarrow}}^{2})+(1-r^{2})a_{\uparrow}a_{\downarrow}^{*}-r^{2}a_{\downarrow}a_{\uparrow}^{*} & (1-r^{2})\abs{a_{\uparrow}}+ r^{2}\abs{a_{\uparrow}}^2-(r\sqrt{1-r^{2}})(a_{\uparrow}a_{\downarrow}^{*}+a_{\uparrow}^{*}a_{\downarrow})
+  \end{array}\right]
+\end{aligned}
+\end{equation}
+
+We have tried to represent the density matrix $\rho^{\prime}$ given in \eqref{eq:finalstate-densitymatrix} in Kraus representatiion. It can be separated into 3 matrices (2 of which are in Kraus form) as:
+
+\begin{equation}
+  \begin{aligned}
+  \rho^{\prime} = {} & r^{2} \left[\begin{array}{cc}\abs{a_{\uparrow}}^{2} & -a_{\uparrow}a_{\downarrow}^{*} \\
+               -a_{\uparrow}^{*}a_{\downarrow} & \abs{a_{\downarrow}}^{2} \end{array} \right] \\
+  & + (1-r^{2})\left[\begin{array}{cc}\abs{a_{\downarrow}}^{2} & a_{\downarrow}a_{\uparrow}^{*} \\
+               a_{\uparrow}a_{\downarrow}^{*} & \abs{a_{\uparrow}}^{2} \end{array} \right] \\
+  & + (r\sqrt{1-r^{2}})\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} & (\abs{a_{\uparrow}}^{2}-\abs{a_{\downarrow}}^{2}) \\
+             (\abs{a_{\uparrow}}^{2}-\abs{a_{\downarrow}}^{2}) & -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*})\end{array} \right]
+  \end{aligned}
+\end{equation}
+which can be written in Kraus form as:
+
+\begin{equation}
+  \begin{aligned}
+    \rho^{\prime} = {} & r^{2}Z\rho_{0}\!Z^{\dagger} + (1-r^{2})X\rho_{0}\!X^{\dagger}
+                  & + (r\sqrt{1-r^{2}})\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} & (\abs{a_{\uparrow}}^{2}-\abs{a_{\downarrow}}^{2}) \\
+             (\abs{a_{\uparrow}}^{2}-\abs{a_{\downarrow}}^{2}) & -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} \end{array}\right]
+  \end{aligned}
+\end{equation}
+
+It can be seen that the first two terms in the above equation are in the Kraus form, whereas the last one couldn't be cast in that form. I have tried combinations of $X$, $Y$, $Z$ (Pauli matrices), and $I$ but it couldn't be cast in that form: the best was some thing of the form $Z\rho\!I + I\rho\!Z$.
+
+\end{document}

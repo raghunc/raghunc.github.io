@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:svg="http://www.w3.org/2000/svg">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>My Home - Kraus representation of the noisy quantum walk</title>
+    <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      <!-- tex2jax: { inlineMath: [[","], ["\\(","\\)"]] }  -->
+      TeX: {equationNumbers: {autoNumber: "AMS"}}
+      });
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+    <!--script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script-->
+  </head>
+  
+  <body>  
+    <div id="header">
+      <div id="logo">
+	<a href="../index.html">Raghu Nandan Chilukuri</a>
+      </div>
+      <div id="navigation-box">
+	<ul>
+	  <li><a href="../index.html">Home</a></li>
+	  <li><a href="../about.html">About</a></li>
+	  <li><a = href="../experience.html">Experience</li>
+	  <li><a href="../work.html">Work</a></li>
+	  <li><a href="../files/RaghuChilukuri_CV.pdf">CV</a></li>
+	  </ul>
+	</div>
+      </div>
+
+      <div class="bodywrap">
+	<div id="main-content" class="content">
+	  <!--
+               
+              -->
+	  <h3 id="quantum-walk-in-kraus-representation">Quantum walk in Kraus representation</h3>
+<h4 id="kraus-representation">Kraus representation</h4>
+<p>This is continued from the <a href="../workposts/quantumwalk.html">part</a>. Here, we try to cast the noisy quantum walk in Kraus operator representation. Here, the “coin” operator is the source of the noise. Assume the coin (or spin ) begins in a state of equal superposition of two chiralities:</p>
+<p><span class="math display">\[
+\begin{equation}
+\mid\!s\!\rangle = a_{\uparrow} \mid\!\uparrow\!\rangle + a_{\downarrow} \mid\!\downarrow\!\rangle
+\end{equation}
+\]</span></p>
+<p>The corresponding density matrix would look in this form: <span class="math display">\[
+\begin{eqnarray}
+  \rho_{0} = \mid\!s\rangle \langle\!s\mid = \left[\begin{array}{c} a_{\uparrow}\\ a_{\downarrow}\end{array}\right] \left[\begin{array}{c}a_{\uparrow}^{*}\quad a_{\downarrow}^{*}\end{array} \right]
+\rho_{0}  = \left[\begin{array}{cc}\lvert a_{\uparrow}\rvert^{2} &amp; a_{\uparrow}a_{\downarrow}^{*} \\
+               a_{\uparrow}^{*}a_{\downarrow} &amp; \lvert a_{\downarrow}\rvert^{2}
+    \end{array} \right]
+\end{eqnarray}
+\]</span></p>
+<p>The noisy quantum operator acts on the initial state to give the final state as: <span class="math display">\[
+\left[\begin{array}{cc} r &amp; \sqrt{1 - r^{2}} \\\sqrt{1 - r^{2}} &amp; -r \end{array}\right] \left[\begin{array}{c} a_{\uparrow} \\ a_{\downarrow} \end{array}\right] = \left[\begin{array}{c}ra_{\uparrow} + a_{\downarrow}\sqrt{1 - r^{2}} \\ a_{\uparrow}\sqrt{1 - r^{2}} - ra_{\downarrow} \end{array}\right]
+\]</span></p>
+<p>The density of the final state in the above equation can be written: <span class="math display">\[
+\begin{equation}\label{eq:finalstate-densitymatrix}
+\begin{aligned}
+\rho^{\prime} &amp; = {} \left[\begin{array}{c}ra_{\uparrow} + a_{\downarrow}\sqrt{1 - r^{2}} \\ a_{\uparrow}\sqrt{1 - r^{2}} - ra_{\downarrow} \end{array}\right] \left[\begin{array}{cc}ra_{\uparrow}^{*} + a_{\downarrow}^{*}\sqrt{1 - r^{2}} &amp; a_{\uparrow}^{*}\sqrt{1 - r^{2}} - ra_{\downarrow}^{*} \end{array}\right] \\
+&amp; = \left[\begin{array}{cc} r^{2}\lvert a_{\uparrow}\rvert^2+(1-r^{2})\lvert a_{\downarrow}\rvert^{2}+(r\sqrt{1-r^{2}})(a_{\uparrow}a_{\downarrow}^{*}+a_{\uparrow}^{*}a_{\downarrow}) &amp; (r\sqrt{1-r^{2}})(\lvert a_{\uparrow}\rvert^{2} - \lvert a_{\downarrow}\rvert^{2})+(1-r^{2})a_{\downarrow}a_{\uparrow}^{*}-r^{2}a_{\uparrow}a_{\downarrow}^{*} \\
+(r\sqrt{1-r^{2}})(\lvert a_{\uparrow}\rvert^{2} - \lvert a_{\downarrow}\rvert^{2})+(1-r^{2})a_{\uparrow}a_{\downarrow}^{*}-r^{2}a_{\downarrow}a_{\uparrow}^{*} &amp; (1-r^{2})\lvert a_{\uparrow}\rvert+ r^{2}\lvert a_{\uparrow}\rvert^2-(r\sqrt{1-r^{2}})(a_{\uparrow}a_{\downarrow}^{*}+a_{\uparrow}^{*}a_{\downarrow})
+  \end{array}\right]
+\end{aligned}
+\end{equation}
+\]</span> The idea is to represent the density matrix <span class="math inline">\(\rho^{\prime}\)</span> given in  in Kraus representatiion. This new density matrix can be separated into 3 matrices as: <span class="math display">\[
+\begin{equation}
+  \begin{aligned}
+  \rho^{\prime} = {} &amp; r^{2} \left[\begin{array}{cc}\lvert a_{\uparrow}\rvert^{2} &amp; -a_{\uparrow}a_{\downarrow}^{*} \\
+               -a_{\uparrow}^{*}a_{\downarrow} &amp; \lvert a_{\downarrow}\rvert^{2} \end{array} \right] 
+   + (1-r^{2})\left[\begin{array}{cc}\lvert a_{\downarrow}\rvert^{2} &amp; a_{\downarrow}a_{\uparrow}^{*} \\
+               a_{\uparrow}a_{\downarrow}^{*} &amp; \lvert a_{\uparrow}\rvert^{2} \end{array} \right] 
+   + (r\sqrt{1-r^{2}})\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} &amp; (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) \\
+             (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) &amp; -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*})\end{array} \right]
+  \end{aligned}
+\end{equation}
+\]</span></p>
+<p>If the limits of <span class="math inline">\(r\)</span> are from <span class="math inline">\(-p\)</span> to <span class="math inline">\(+p\)</span>, it can be written in Kraus form as: <span class="math display">\[
+\begin{equation}\label{eq:Krausform-integral}
+  \begin{aligned}
+    \rho_{s} = \int\limits_{r=-p}^{+p}\rho^{\prime}\,\mathrm{d}r = {} &amp; \int\limits_{r=-p}^{+p}\mathrm{d}r\,r^{2}Z\rho_{0}\!Z^{\dagger} + \int\limits_{r=-p}^{+p}\mathrm{d}r\,(1-r^{2})X\rho_{0}\!X^{\dagger} \\
+                  &amp; + \int\limits_{r=-p}^{+p}\mathrm{d}r\,(r\sqrt{1-r^{2}})\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} &amp; (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) \\
+             (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) &amp; -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} \end{array}\right]
+  \end{aligned}
+\end{equation}
+\]</span> The terms <span class="math inline">\(Z\rho\!Z^{\dagger}\)</span> and <span class="math inline">\(X\rho\!X^{\dagger}\)</span>, and the last matrix are independent of “<span class="math inline">\(r\)</span>” and hence donot contribute to the integral, and the final state <span class="math inline">\(\rho_{s}\)</span> can be written as: <span class="math display">\[
+\begin{equation}
+  \begin{aligned}
+    \rho_{s} = \int\limits_{r=-p}^{+p}\rho^{\prime}\,\mathrm{d}r = {} &amp; \left.\left(\dfrac{r^{3}}{3}\right)\right|_{-p}^{+p}Z\rho_{0}\!Z^{\dagger} + \left.\left(r -\dfrac{r^{3}}{3}\right)\right|_{-p}^{+p}X\rho_{0}\!X^{\dagger} \\
+                  &amp; + \left.\left(-\dfrac{1}{3}\right)\left(1-r^{2}\right)^{\frac{3}{2}}\right|_{-p}^{+p}\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} &amp; (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) \\
+             (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) &amp; -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} \end{array}\right]
+    \end{aligned}
+\end{equation}
+\]</span> If we let <span class="math inline">\(r\)</span> range from <span class="math inline">\(-1\)</span> to <span class="math inline">\(+1\)</span>, the last term gets cancelled out, and the final form looks: <span class="math display">\[
+\begin{equation}
+  %\begin{aligned}
+    \rho_{s} = \left(\dfrac{2}{3}\right)Z\rho_{0}\!Z^{\dagger} + \left(\dfrac{4}{3}\right)X\rho_{0}\!X^{\dagger}
+    %\end{aligned}
+\end{equation}
+\]</span></p>
+<p>However, the earlier working assumption was that <span class="math inline">\(r\)</span> ranges from <span class="math inline">\(0\)</span> to <span class="math inline">\(1\)</span>, and under this assumption, eq. changes to: <span class="math display">\[
+\begin{equation}\label{eq:Krausform-integral-actual}
+  \begin{aligned}
+    \rho_{s} = \int\limits_{r=-0}^{1}\rho^{\prime}\,\mathrm{d}r = {} &amp; \int\limits_{r=0}^{1}\mathrm{d}r\,r^{2}Z\rho_{0}\!Z^{\dagger} + \int\limits_{r=0}^{1}\mathrm{d}r\,(1-r^{2})X\rho_{0}\!X^{\dagger} \\
+                  &amp; + \int\limits_{r=0}^{1}\mathrm{d}r\,(r\sqrt{1-r^{2}})\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} &amp; (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) \\
+             (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) &amp; -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} \end{array}\right]
+  \end{aligned}
+\end{equation}
+\]</span> which can simplified to the form: <span class="math display">\[
+\begin{equation}\label{eq:actual-decomp}
+  \begin{aligned}
+    \rho_{s} = {} &amp; \left(\dfrac{1}{3}\right)Z\rho_{0}\!Z^{\dagger} + \left(\dfrac{2}{3}\right)X\rho_{0}\!X^{\dagger} \\
+                  &amp; + \left(\dfrac{1}{3}\right)\left[\begin{array}{cc}a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*} &amp; (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) \\
+             (\lvert a_{\uparrow}\rvert^{2}-\lvert a_{\downarrow}\rvert^{2}) &amp; -(a_{\uparrow}a_{\downarrow}^{*}+a_{\downarrow}a_{\uparrow}^{*}) \end{array}\right]
+  \end{aligned}
+\end{equation}
+\]</span></p>
+<h5 id="future-work">Future Work</h5>
+<p>The last matrix in the previous equation does not vanish easily, and it is not straight-forward to express the new density matrix in Kraus operator representation.</p>
+<p><sub><sup><br /><br />Note: If you can’t see the equations, please wait for a few seconds and check your internet connection. This site uses the cloud version of MathJax, and it may take time to render on slow connetions. If you still see errors in rendering, please let me know.<br /></sup></sub></p>
+	</div>
+      </div>
+      
+      <div id="footer">
+	<div id="footer-text">
+	  Site proudly generated by
+	  <a href="http://jaspervdj.be/hakyll">Hakyll</a> </div>
+      </div>
+      
+    </body>
+  </html>

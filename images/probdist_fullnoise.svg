@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="152.4mm" height="76.2mm" viewBox="0 0 152.4 76.2"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="img-fc77d6e5-1">
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-fc77d6e5-2">
+    <text x="83.85" y="64.59" text-anchor="middle" dy="0.6em">Position (n)</text>
+  </g>
+  <g class="guide xlabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-fc77d6e5-3">
+    <text x="22.31" y="57.91" text-anchor="middle" dy="0.6em">-100</text>
+    <text x="53.08" y="57.91" text-anchor="middle" dy="0.6em">-50</text>
+    <text x="83.85" y="57.91" text-anchor="middle" dy="0.6em">0</text>
+    <text x="114.63" y="57.91" text-anchor="middle" dy="0.6em">50</text>
+    <text x="145.4" y="57.91" text-anchor="middle" dy="0.6em">100</text>
+  </g>
+<g clip-path="url(#img-fc77d6e5-4)">
+  <g id="img-fc77d6e5-5">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-fc77d6e5-6">
+      <rect x="20.31" y="12.61" width="127.09" height="44.3"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-fc77d6e5-7">
+      <path fill="none" d="M20.31,54.91 L 147.4 54.91"/>
+      <path fill="none" d="M20.31,44.84 L 147.4 44.84"/>
+      <path fill="none" d="M20.31,34.76 L 147.4 34.76"/>
+      <path fill="none" d="M20.31,24.69 L 147.4 24.69"/>
+      <path fill="none" d="M20.31,14.61 L 147.4 14.61"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-fc77d6e5-8">
+      <path fill="none" d="M22.31,12.61 L 22.31 56.91"/>
+      <path fill="none" d="M53.08,12.61 L 53.08 56.91"/>
+      <path fill="none" d="M83.85,12.61 L 83.85 56.91"/>
+      <path fill="none" d="M114.63,12.61 L 114.63 56.91"/>
+      <path fill="none" d="M145.4,12.61 L 145.4 56.91"/>
+    </g>
+    <g class="plotpanel" id="img-fc77d6e5-9">
+      <g stroke-width="0.35" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="none" stroke="#0000FF" id="img-fc77d6e5-10">
+        <path fill="none" d="M22.31,54.91 L 22.92 54.91 23.54 54.91 24.15 54.91 24.77 54.91 25.38 54.91 26 54.91 26.61 54.91 27.23 54.91 27.84 54.91 28.46 54.91 29.08 54.91 29.69 54.91 30.31 54.91 30.92 54.91 31.54 54.91 32.15 54.91 32.77 54.91 33.38 54.91 34 54.91 34.61 54.91 35.23 54.91 35.85 54.91 36.46 54.91 37.08 54.91 37.69 54.91 38.31 54.91 38.92 54.91 39.54 54.91 40.15 54.91 40.77 54.91 41.38 54.91 42 54.91 42.62 54.91 43.23 54.91 43.85 54.91 44.46 54.91 45.08 54.91 45.69 54.91 46.31 54.91 46.92 54.91 47.54 54.91 48.15 54.91 48.77 54.91 49.39 54.91 50 54.91 50.62 54.91 51.23 54.91 51.85 54.91 52.46 54.91 53.08 54.91 53.69 54.91 54.31 54.91 54.93 54.91 55.54 54.91 56.16 54.91 56.77 54.91 57.39 54.91 58 54.91 58.62 54.9 59.23 54.91 59.85 54.9 60.46 54.91 61.08 54.86 61.7 54.91 62.31 54.83 62.93 54.91 63.54 54.66 64.16 54.91 64.77 54.53 65.39 54.91 66 54.16 66.62 54.91 67.23 51.66 67.85 54.91 68.47 52.33 69.08 54.91 69.7 47.86 70.31 54.91 70.93 52.39 71.54 54.91 72.16 51.5 72.77 54.91 73.39 52.58 74 54.91 74.62 51.89 75.24 54.91 75.85 52.23 76.47 54.91 77.08 51.77 77.7 54.91 78.31 47.95 78.93 54.91 79.54 36.46 80.16 54.91 80.78 47.52 81.39 54.91 82.01 21.77 82.62 54.91 83.24 51.7 83.85 54.91 84.47 51.7 85.08 54.91 85.7 21.77 86.31 54.91 86.93 47.52 87.55 54.91 88.16 36.46 88.78 54.91 89.39 47.95 90.01 54.91 90.62 51.77 91.24 54.91 91.85 52.23 92.47 54.91 93.08 51.89 93.7 54.91 94.32 52.58 94.93 54.91 95.55 51.5 96.16 54.91 96.78 52.39 97.39 54.91 98.01 47.86 98.62 54.91 99.24 52.33 99.85 54.91 100.47 51.66 101.09 54.91 101.7 54.16 102.32 54.91 102.93 54.53 103.55 54.91 104.16 54.66 104.78 54.91 105.39 54.83 106.01 54.91 106.63 54.86 107.24 54.91 107.86 54.9 108.47 54.91 109.09 54.9 109.7 54.91 110.32 54.91 110.93 54.91 111.55 54.91 112.16 54.91 112.78 54.91 113.4 54.91 114.01 54.91 114.63 54.91 115.24 54.91 115.86 54.91 116.47 54.91 117.09 54.91 117.7 54.91 118.32 54.91 118.93 54.91 119.55 54.91 120.17 54.91 120.78 54.91 121.4 54.91 122.01 54.91 122.63 54.91 123.24 54.91 123.86 54.91 124.47 54.91 125.09 54.91 125.7 54.91 126.32 54.91 126.94 54.91 127.55 54.91 128.17 54.91 128.78 54.91 129.4 54.91 130.01 54.91 130.63 54.91 131.24 54.91 131.86 54.91 132.48 54.91 133.09 54.91 133.71 54.91 134.32 54.91 134.94 54.91 135.55 54.91 136.17 54.91 136.78 54.91 137.4 54.91 138.01 54.91 138.63 54.91 139.25 54.91 139.86 54.91 140.48 54.91 141.09 54.91 141.71 54.91 142.32 54.91 142.94 54.91 143.55 54.91 144.17 54.91 144.78 54.91 145.4 54.91"/>
+      </g>
+    </g>
+  </g>
+</g>
+  <g class="guide ylabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-fc77d6e5-11">
+    <text x="19.3" y="54.91" text-anchor="end" dy="0.35em">0.00</text>
+    <text x="19.3" y="44.84" text-anchor="end" dy="0.35em">0.05</text>
+    <text x="19.3" y="34.76" text-anchor="end" dy="0.35em">0.10</text>
+    <text x="19.3" y="24.69" text-anchor="end" dy="0.35em">0.15</text>
+    <text x="19.3" y="14.61" text-anchor="end" dy="0.35em">0.20</text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-fc77d6e5-12">
+    <text x="8.81" y="32.76" text-anchor="middle" dy="0.35em" transform="rotate(-90, 8.81, 34.76)">Probability P(n)</text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-fc77d6e5-13">
+    <text x="83.85" y="10.61" text-anchor="middle">Probability distribution as function of position</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-fc77d6e5-4">
+  <path d="M20.31,12.61 L 147.4 12.61 147.4 56.91 20.31 56.91" />
+</clipPath>
+</defs>
+</svg>
