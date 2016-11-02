@@ -6,7 +6,7 @@ Here I list my work in different areas: quantum computing, condensed matter phys
 
 As of Nov. 2016, I have finished transcription of a part of my work on quantum walks.
 
-- [First webpage](/work/quantumwalk_intro.html) is an introduction to (dicrete) quantum walk, and contrasts it with the classical random walk.
+- [First webpage](/work/quantumwalk_intro.html) is an introduction to (discrete) quantum walk, and contrasts it with the classical random walk.
 
 - [Next webpage](/work/quantumwalk_noisy.html) extends on the introductory page on quantum walk, and introduces a model of noise in the quantum walk, and contrasts the results with ideal quantum walk.
 
